@@ -1,0 +1,23 @@
+## Create CARS database for Capstone project
+
+import psycopg2
+
+#update next 3 lines for your specific setup:
+hostname = 'cars1.ccau5xknroql.us-east-1.rds.amazonaws.com:5432'
+username = 'ppuc'
+password = '1qaz!QAZ'
+
+conn = psycopg2.connect(host=hostname, user=username, password=password, port="5432")
+cur = conn.cursor()
+
+cur.execute("BEGIN")
+cur.execute("COMMIT")
+
+#drop database CARS if exists
+cur.execute("DROP DATABASE IF EXISTS CARS;")
+
+#create new database CARS
+cur.execute('CREATE DATABASE "CARS" OWNER ppuc TABLESPACE = pg_default;')
+
+conn.close()
+print "The database CARS has been created!"
