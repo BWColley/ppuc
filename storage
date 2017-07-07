@@ -3,7 +3,7 @@
 import psycopg2
 
 #update next 3 lines for your specific setup:
-hostname = 'cars1.ccau5xknroql.us-east-1.rds.amazonaws.com'
+hostname = 'cars2.ccau5xknroql.us-east-1.rds.amazonaws.com'
 username = 'ppucdata'
 password = '1qaz!QAZ'
 
